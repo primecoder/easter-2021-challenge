@@ -18,7 +18,7 @@ class CBAProductListViewModel: ObservableObject {
     init() {
         // Need to send 'sink' to start the flow.
         cancellable = cba.$products.sink(receiveValue: { (products) in
-            self.products = products
+            self.products = products.sorted(by: { $0.name < $1.name })  // Sorted by name
         })
     }
 }

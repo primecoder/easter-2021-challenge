@@ -20,16 +20,20 @@ struct CBAProductListView: View {
                 .padding(.vertical)
                 .background(Color(red: 0.999, green: 0.834, blue: 0.158))
             ScrollView {
-                if (cbaVm.products.count < 1) {
-                    Text("Loading ...")
-                        .frame(maxWidth: .infinity, maxHeight: 50)
-                }
-                ForEach(Array(cbaVm.products.enumerated()), id: \.offset) { idx, product in
-                    CBAProductSummaryView(product: product,
-                                          totalProduct: cbaVm.products.count,
-                                          itemIndex: idx + 1)
-                        .padding(.vertical, 3)
-                        .padding(.horizontal)
+                ScrollViewReader { value in
+                    if (cbaVm.products.count < 1) {
+                        Text("Loading ...")
+                            .frame(maxWidth: .infinity, maxHeight: 50)
+                    }
+                    ForEach(Array(cbaVm.products.enumerated()), id: \.offset) { idx, product in
+                        CBAProductSummaryView(product: product,
+                                              totalProduct: cbaVm.products.count,
+                                              itemIndex: idx + 1,
+                                              scrollViewProxy: value)
+                            .padding(.vertical, 3)
+                            .padding(.horizontal)
+                            .id(idx)
+                    }
                 }
             }
             .padding(.top, 12)
@@ -43,6 +47,7 @@ struct CBAProductSummaryView: View {
     var product: Product
     var totalProduct: Int = 0
     var itemIndex: Int = 0
+    var scrollViewProxy: ScrollViewProxy? = nil
     
     var body: some View {
         VStack {
@@ -62,12 +67,20 @@ struct CBAProductSummaryView: View {
             .cornerRadius(12)
             .shadow(color: .gray, radius: 5, x: 0.0, y: 0.0)
             
-            Text("\(itemIndex)/\(totalProduct)")
-                .font(.footnote)
-                .padding(.horizontal)
-                .padding(.vertical, 0)
-                .foregroundColor(Color.gray)
-                .frame(maxWidth: .infinity, alignment: .trailing)
+            HStack {
+                Text("updated: \(product.lastUpdated)")
+                    .font(.custom("Helvetica Neue", fixedSize: 10))
+                Text("\(itemIndex)/\(totalProduct)")
+                    .font(.footnote)
+                    .bold()
+                Button("^") { scrollViewProxy?.scrollTo(0) }
+                    .font(.footnote)
+                    .padding(0)
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 0)
+            .foregroundColor(Color.gray)
+            .frame(maxWidth: .infinity, alignment: .trailing)
         }
     }
 }
