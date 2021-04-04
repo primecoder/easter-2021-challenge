@@ -59,7 +59,7 @@ struct CBAProductSummaryView: View {
                     .padding()
                     .background(Color(red: 0.996, green: 0.734, blue: 0.058))
                 Text(product.productDescription)
-                    .lineLimit(3)
+                    .lineLimit(4)
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.white)
@@ -73,7 +73,7 @@ struct CBAProductSummaryView: View {
                 Text("\(itemIndex)/\(totalProduct)")
                     .font(.footnote)
                     .bold()
-                Button("^") { scrollViewProxy?.scrollTo(0) }
+                Button("^") { withAnimation(.easeInOut(duration: 1)) { scrollViewProxy?.scrollTo(0) } }
                     .font(.footnote)
                     .padding(0)
             }
