@@ -20,16 +20,13 @@ struct DataClass: Codable {
 // MARK: - Product
 struct Product: Codable {
     let productID: String
-    let effectiveFrom, effectiveTo: Date
-    let lastUpdated: String
-    let productCategory: ProductCategory
-    let name, productDescription: String
-    let brand: Brand
-    let brandName: BrandName
-    let applicationURI: String?
+    let effectiveFrom, effectiveTo: String
+    let lastUpdated, productCategory, name, productDescription: String
+    let brand, brandName: String
+    let applicationURI: String? = nil
     let isTailored: Bool
-    let additionalInformation: AdditionalInformation
-    
+    let additionalInformation: AdditionalInformation? = nil
+
     enum CodingKeys: String, CodingKey {
         case productID = "productId"
         case effectiveFrom, effectiveTo, lastUpdated, productCategory, name
@@ -42,11 +39,11 @@ struct Product: Codable {
 
 // MARK: - AdditionalInformation
 struct AdditionalInformation: Codable {
-    let overviewURI: String?
-    let termsURI: String?
-    let eligibilityURI: String?
-    let feesAndPricingURI: String?
-    
+    let overviewURI: String
+    let termsURI: String
+    let eligibilityURI: String
+    let feesAndPricingURI: String
+
     enum CodingKeys: String, CodingKey {
         case overviewURI = "overviewUri"
         case termsURI = "termsUri"
@@ -55,24 +52,10 @@ struct AdditionalInformation: Codable {
     }
 }
 
-enum Brand: String, Codable {
-    case cba = "CBA"
-}
-
-enum BrandName: String, Codable {
-    case commBank = "CommBank"
-}
-
-enum ProductCategory: String, Codable {
-    case credAndChrgCards = "CRED_AND_CHRG_CARDS"
-    case termDeposits = "TERM_DEPOSITS"
-    case transAndSavingsAccounts = "TRANS_AND_SAVINGS_ACCOUNTS"
-}
-
 // MARK: - Links
 struct Links: Codable {
     let linksSelf, first, next, last: String
-    
+
     enum CodingKeys: String, CodingKey {
         case linksSelf = "self"
         case first, next, last
