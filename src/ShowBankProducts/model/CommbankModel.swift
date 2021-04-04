@@ -54,7 +54,7 @@ struct AdditionalInformation: Codable {
 
 // MARK: - Links
 struct Links: Codable {
-    let linksSelf, first, next, last: String
+    let linksSelf, first, next, last: String?
 
     enum CodingKeys: String, CodingKey {
         case linksSelf = "self"

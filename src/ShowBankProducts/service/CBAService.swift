@@ -10,7 +10,7 @@ import Combine
 
 /// Provide accesses to Commonwealth Bank's public APIs and services.
 class CBAService: ObservableObject {
-    let getProductsEndpoint: String = "https://api.commbank.com.au/public/cds-au/v1/banking/products"
+    let getProductsEndpoint: String = "https://api.commbank.com.au/public/cds-au/v1/banking/products?page-size=500"
     
     /// List  of available products from CBA.
     @Published var products: [Product] = []
