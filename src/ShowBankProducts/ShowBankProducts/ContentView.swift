@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var  cba = CBAService()
+    @ObservedObject var  cbaVm = CBAProductListViewModel()
     
     var body: some View {
         VStack {
             Text("???")
             ScrollView {
-                ForEach(cba.products, id: \.productID) {  product in
+                ForEach(cbaVm.products, id: \.productID) {  product in
                     Text(product.name)
                 }
             }
