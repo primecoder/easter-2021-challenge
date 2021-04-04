@@ -10,7 +10,7 @@ import Combine
 
 /// Provide View Model for listing CBA products.
 class CBAProductListViewModel: ObservableObject {
-    var cba = CBAService()
+    var cba = CBAProductListService()
     @Published var products = [Product]()
     
     private var cancellable: AnyCancellable? = nil

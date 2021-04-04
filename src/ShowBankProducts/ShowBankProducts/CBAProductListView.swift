@@ -11,35 +11,37 @@ struct CBAProductListView: View {
     @ObservedObject var  cbaVm = CBAProductListViewModel()
     
     var body: some View {
-        VStack(spacing: 0) {
-            Text("Commonwealth Bank Products")
-                .font(.title)
-                .bold()
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding(.top, 46)
-                .padding(.vertical)
-                .background(Color(red: 0.999, green: 0.834, blue: 0.158))
-            ScrollView {
-                ScrollViewReader { value in
-                    if (cbaVm.products.count < 1) {
-                        Text("Loading ...")
-                            .frame(maxWidth: .infinity, maxHeight: 50)
-                    }
-                    ForEach(Array(cbaVm.products.enumerated()), id: \.offset) { idx, product in
-                        CBAProductSummaryView(product: product,
-                                              totalProduct: cbaVm.products.count,
-                                              itemIndex: idx + 1,
-                                              scrollViewProxy: value)
-                            .padding(.vertical, 3)
-                            .padding(.horizontal)
-                            .id(idx)
+        NavigationView {
+            VStack(spacing: 0) {
+                Text("Commonwealth Bank Products")
+                    .font(.title)
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.top, 46)
+                    .padding(.vertical)
+                    .background(Color(red: 0.999, green: 0.834, blue: 0.158))
+                ScrollView {
+                    ScrollViewReader { value in
+                        if (cbaVm.products.count < 1) {
+                            Text("Loading ...")
+                                .frame(maxWidth: .infinity, maxHeight: 50)
+                        }
+                        ForEach(Array(cbaVm.products.enumerated()), id: \.offset) { idx, product in
+                            CBAProductSummaryView(product: product,
+                                                  totalProduct: cbaVm.products.count,
+                                                  itemIndex: idx + 1,
+                                                  scrollViewProxy: value)
+                                .padding(.vertical, 3)
+                                .padding(.horizontal)
+                                .id(idx)
+                        }
                     }
                 }
+                .padding(.top, 12)
+                .background(Color(red:0.803, green:0.779, blue:0.779))
             }
-            .padding(.top, 12)
-            .background(Color(red:0.803, green:0.779, blue:0.779))
+            .edgesIgnoringSafeArea(.all)
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 
@@ -52,12 +54,19 @@ struct CBAProductSummaryView: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 0) {
-                Text(product.name)
-                    .font(.title3)
-                    .bold()
+                NavigationLink(destination: Text("?")) {
+                    HStack {
+                        Text(product.name)
+                            .font(.title3)
+                            .bold()
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                     .background(Color(red: 0.996, green: 0.734, blue: 0.058))
+                }
+
                 Text(product.productDescription)
                     .lineLimit(4)
                     .frame(maxWidth: .infinity)
@@ -82,11 +91,5 @@ struct CBAProductSummaryView: View {
             .foregroundColor(Color.gray)
             .frame(maxWidth: .infinity, alignment: .trailing)
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        CBAProductListView()
     }
 }

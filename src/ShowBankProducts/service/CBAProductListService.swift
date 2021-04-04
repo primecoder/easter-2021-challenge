@@ -8,22 +8,25 @@
 import Foundation
 import Combine
 
-/// Provide accesses to Commonwealth Bank's public APIs and services.
-class CBAService: ObservableObject {
+/// Provide accesses to Commonwealth Bank's public APIs for retrieving list of products.
+class CBAProductListService: ObservableObject {
     let getProductsEndpoint: String = "https://api.commbank.com.au/public/cds-au/v1/banking/products?page-size=500"
     
     /// List  of available products from CBA.
     @Published var products: [Product] = []
     
     /// Store a cancellable-publisher for fetching products.
-    private var fetchProductsCancellable: AnyCancellable? = nil
+    private var fetchCancellable: AnyCancellable? = nil
     
-    init() {
-        refetchProducts()
+    var opQueue: DispatchQueue
+    
+    init(on queue: DispatchQueue = DispatchQueue.main) {
+        opQueue = queue
+        refetchData()
     }
     
     /// (Re)fetch products from remote server and cache the product list locally.
-    func refetchProducts() {
+    func refetchData() {
         guard let url = URL(string: getProductsEndpoint) else {
             print("ERROR> CBAService.refetchProducts: failed to create URL")
             return
@@ -33,10 +36,10 @@ class CBAService: ObservableObject {
         urlRequest.setValue("application/json", forHTTPHeaderField: "Accept")
         urlRequest.setValue("2", forHTTPHeaderField: "x-v")
 
-        fetchProductsCancellable = URLSession.shared
+        fetchCancellable = URLSession.shared
             .dataTaskPublisher(for: urlRequest)
             .map { $0.data }
-            .receive(on: DispatchQueue.main)
+            .receive(on: opQueue)
             .decode(type: CommbankProduct.self, decoder: JSONDecoder())
             .sink { result in
                 print("Done fetching products: \(result)")
