@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// Provide View Model for listing CBA products.
 class CBAProductListViewModel: ObservableObject {
     var cba = CBAService()
     @Published var products = [Product]()
