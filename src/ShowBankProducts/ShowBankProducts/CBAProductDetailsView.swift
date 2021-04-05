@@ -22,6 +22,7 @@ struct CBAProductDetailsView: View {
                 .bold()
                 .font(.title)
                 .lineLimit(3)
+                .padding(.horizontal)
                 .background(Color(red: 0.996, green: 0.734, blue: 0.058))
             
             ScrollView {
