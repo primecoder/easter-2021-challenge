@@ -25,13 +25,13 @@ struct CommbankProductDetails: Codable {
     struct DataClass: Codable {
         let features: [Feature]
         let eligibility: [Eligibility]
-        let fees: [Fee]
+        let fees: [Fee]?
         let depositRates: [DepositRate]?
         let productID: String
         let effectiveFrom, effectiveTo: String?
         let lastUpdated, productCategory, name, dataDescription: String
         let brand, brandName: String
-        let applicationURI: String
+        let applicationURI: String?
         let isTailored: Bool
         let additionalInformation: AdditionalInformation?
         
@@ -48,9 +48,9 @@ struct CommbankProductDetails: Codable {
     
     // MARK: - AdditionalInformation
     struct AdditionalInformation: Codable {
-        let overviewURI: String
-        let termsURI: String
-        let eligibilityURI, feesAndPricingURI: String
+        let overviewURI: String?
+        let termsURI: String?
+        let eligibilityURI, feesAndPricingURI: String?
         
         enum CodingKeys: String, CodingKey {
             case overviewURI = "overviewUri"

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CBAProductListView: View {
-    @ObservedObject var  cbaVm = CBAProductListViewModel()
+    @ObservedObject var cbaVm = CBAProductListViewModel()
     
     var body: some View {
         NavigationView {
@@ -54,7 +54,7 @@ struct CBAProductSummaryView: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 0) {
-                NavigationLink(destination: Text("?")) {
+                NavigationLink(destination: CBAProductDetailsView(productId: product.productID)) {
                     HStack {
                         Text(product.name)
                             .font(.title3)
@@ -65,6 +65,7 @@ struct CBAProductSummaryView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                     .background(Color(red: 0.996, green: 0.734, blue: 0.058))
+                    .foregroundColor(Color.black)
                 }
 
                 Text(product.productDescription)
