@@ -34,6 +34,7 @@ struct CBAProductListView: View {
                                 .padding(.vertical, 3)
                                 .padding(.horizontal)
                                 .id(idx)
+                                .accessibility(identifier: "ProductSummaryView")
                         }
                     }
                 }
@@ -66,6 +67,7 @@ struct CBAProductSummaryView: View {
                     .padding()
                     .background(Color(red: 0.996, green: 0.734, blue: 0.058))
                     .foregroundColor(Color.black)
+                    .accessibility(identifier: "ProductLinkNavigation")
                 }
 
                 Text(product.productDescription)

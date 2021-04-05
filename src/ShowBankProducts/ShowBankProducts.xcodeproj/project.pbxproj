@@ -20,6 +20,7 @@
 		5097F955261AD532002BA689 /* ShowBankProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F954261AD532002BA689 /* ShowBankProductsTests.swift */; };
 		5097F987261AF2F4002BA689 /* CBAServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F986261AF2F4002BA689 /* CBAServices.swift */; };
 		5097F988261AF2F4002BA689 /* CBAServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F986261AF2F4002BA689 /* CBAServices.swift */; };
+		5097F999261AF548002BA689 /* ShowBankProductsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F998261AF548002BA689 /* ShowBankProductsUITests.swift */; };
 		5C5D697E26197BD8001F7E06 /* ShowBankProductsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D697D26197BD8001F7E06 /* ShowBankProductsApp.swift */; };
 		5C5D698026197BD8001F7E06 /* CBAProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D697F26197BD8001F7E06 /* CBAProductListView.swift */; };
 		5C5D698226197BD9001F7E06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C5D698126197BD9001F7E06 /* Assets.xcassets */; };
@@ -31,6 +32,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		5097F957261AD532002BA689 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C5D697226197BD8001F7E06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C5D697926197BD8001F7E06;
+			remoteInfo = ShowBankProducts;
+		};
+		5097F99B261AF548002BA689 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5C5D697226197BD8001F7E06 /* Project object */;
 			proxyType = 1;
@@ -62,6 +70,9 @@
 		5097F954261AD532002BA689 /* ShowBankProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBankProductsTests.swift; sourceTree = "<group>"; };
 		5097F956261AD532002BA689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5097F986261AF2F4002BA689 /* CBAServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBAServices.swift; sourceTree = "<group>"; };
+		5097F996261AF548002BA689 /* ShowBankProductsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowBankProductsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5097F998261AF548002BA689 /* ShowBankProductsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBankProductsUITests.swift; sourceTree = "<group>"; };
+		5097F99A261AF548002BA689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C5D697A26197BD8001F7E06 /* ShowBankProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowBankProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5D697D26197BD8001F7E06 /* ShowBankProductsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBankProductsApp.swift; sourceTree = "<group>"; };
 		5C5D697F26197BD8001F7E06 /* CBAProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBAProductListView.swift; sourceTree = "<group>"; };
@@ -75,6 +86,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		5097F94F261AD532002BA689 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5097F993261AF548002BA689 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -126,6 +144,15 @@
 			path = ShowBankProductsTests;
 			sourceTree = "<group>";
 		};
+		5097F997261AF548002BA689 /* ShowBankProductsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5097F998261AF548002BA689 /* ShowBankProductsUITests.swift */,
+				5097F99A261AF548002BA689 /* Info.plist */,
+			);
+			path = ShowBankProductsUITests;
+			sourceTree = "<group>";
+		};
 		5C5D697126197BD8001F7E06 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +162,7 @@
 				5C5D697C26197BD8001F7E06 /* ShowBankProducts */,
 				5CEB7D37261983CC00CB1EB6 /* CommbankProbe */,
 				5097F953261AD532002BA689 /* ShowBankProductsTests */,
+				5097F997261AF548002BA689 /* ShowBankProductsUITests */,
 				5C5D697B26197BD8001F7E06 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -145,6 +173,7 @@
 				5C5D697A26197BD8001F7E06 /* ShowBankProducts.app */,
 				5CEB7D36261983CC00CB1EB6 /* CommbankProbe */,
 				5097F952261AD532002BA689 /* ShowBankProductsTests.xctest */,
+				5097F996261AF548002BA689 /* ShowBankProductsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,6 +237,24 @@
 			productReference = 5097F952261AD532002BA689 /* ShowBankProductsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5097F995261AF548002BA689 /* ShowBankProductsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5097F99D261AF548002BA689 /* Build configuration list for PBXNativeTarget "ShowBankProductsUITests" */;
+			buildPhases = (
+				5097F992261AF548002BA689 /* Sources */,
+				5097F993261AF548002BA689 /* Frameworks */,
+				5097F994261AF548002BA689 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5097F99C261AF548002BA689 /* PBXTargetDependency */,
+			);
+			name = ShowBankProductsUITests;
+			productName = ShowBankProductsUITests;
+			productReference = 5097F996261AF548002BA689 /* ShowBankProductsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		5C5D697926197BD8001F7E06 /* ShowBankProducts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C5D698926197BD9001F7E06 /* Build configuration list for PBXNativeTarget "ShowBankProducts" */;
@@ -255,6 +302,10 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 5C5D697926197BD8001F7E06;
 					};
+					5097F995261AF548002BA689 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5C5D697926197BD8001F7E06;
+					};
 					5C5D697926197BD8001F7E06 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -279,12 +330,20 @@
 				5C5D697926197BD8001F7E06 /* ShowBankProducts */,
 				5CEB7D35261983CC00CB1EB6 /* CommbankProbe */,
 				5097F951261AD532002BA689 /* ShowBankProductsTests */,
+				5097F995261AF548002BA689 /* ShowBankProductsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5097F950261AD532002BA689 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5097F994261AF548002BA689 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,6 +367,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5097F955261AD532002BA689 /* ShowBankProductsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5097F992261AF548002BA689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5097F999261AF548002BA689 /* ShowBankProductsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +416,11 @@
 			isa = PBXTargetDependency;
 			target = 5C5D697926197BD8001F7E06 /* ShowBankProducts */;
 			targetProxy = 5097F957261AD532002BA689 /* PBXContainerItemProxy */;
+		};
+		5097F99C261AF548002BA689 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C5D697926197BD8001F7E06 /* ShowBankProducts */;
+			targetProxy = 5097F99B261AF548002BA689 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -396,6 +468,42 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShowBankProducts.app/ShowBankProducts";
+			};
+			name = Release;
+		};
+		5097F99E261AF548002BA689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShowBankProductsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ace-authors.ShowBankProductsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShowBankProducts;
+			};
+			name = Debug;
+		};
+		5097F99F261AF548002BA689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShowBankProductsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ace-authors.ShowBankProductsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShowBankProducts;
 			};
 			name = Release;
 		};
@@ -597,6 +705,15 @@
 			buildConfigurations = (
 				5097F95A261AD532002BA689 /* Debug */,
 				5097F95B261AD532002BA689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5097F99D261AF548002BA689 /* Build configuration list for PBXNativeTarget "ShowBankProductsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5097F99E261AF548002BA689 /* Debug */,
+				5097F99F261AF548002BA689 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
