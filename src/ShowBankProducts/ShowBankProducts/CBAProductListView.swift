@@ -13,13 +13,6 @@ struct CBAProductListView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                Text("Commonwealth Bank Products")
-                    .font(.title)
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(.top, 46)
-                    .padding(.vertical)
-                    .background(Color(red: 0.999, green: 0.834, blue: 0.158))
                 ScrollView {
                     ScrollViewReader { value in
                         if (cbaVm.products.count < 1) {
@@ -41,7 +34,9 @@ struct CBAProductListView: View {
                 .padding(.top, 12)
                 .background(Color(red:0.803, green:0.779, blue:0.779))
             }
-            .edgesIgnoringSafeArea(.all)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Commonwealth Bank Products")
+            .edgesIgnoringSafeArea(.bottom)
         }
     }
 }

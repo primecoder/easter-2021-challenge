@@ -40,7 +40,7 @@ class ShowBankProductsUITests: XCTestCase {
         XCTAssertTrue(app.buttons["Features"].exists)
         XCTAssertTrue(app.buttons["Fees"].exists)
         XCTAssertTrue(app.buttons["Rates"].exists)
-        XCTAssertTrue(app.buttons["Back"].exists)
+        XCTAssertTrue(app.buttons["Commonwealth Bank Products"].exists)
         
         app.buttons["Features"].tap()
         XCTAssertTrue(app.staticTexts["Features:"].exists)
@@ -51,7 +51,7 @@ class ShowBankProductsUITests: XCTestCase {
         app.buttons["Rates"].tap()
         XCTAssertTrue(app.staticTexts["Deposit Rates:"].exists)
         
-        app.buttons["Back"].tap()
+        app.buttons["Commonwealth Bank Products"].tap()
         XCTAssertTrue(app.staticTexts["Commonwealth Bank Products"].exists)
         
         print("Done")
