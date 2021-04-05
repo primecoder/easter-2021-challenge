@@ -47,7 +47,13 @@ class CBAProductDetailsService: ObservableObject {
             .receive(on: opQueue)
             .decode(type: CommbankProductDetails.self, decoder: JSONDecoder())
             .sink { result in
-                print("Done fetching product details: \(result)")
+                switch result {
+                case .finished:
+                    print("Done fetching product details: \(result)")
+                    self.fetchCancellable?.cancel()
+                default:
+                    break
+                }
             } receiveValue: { (values) in
                 self.productDetails = values.data
             }

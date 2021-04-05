@@ -68,17 +68,17 @@ func probeProductDetailsEndpoint() -> Cancellable {
 //    }
 
 // TODO: move this to unit test
-let opQueue = DispatchQueue.global()
-//let cbaService = CBAProductDetailsService(on: opQueue, productId: "5b47845a7f0044e58db616bb734e8350")
-let cbaService = CBAProductDetailsService(on: opQueue, productId: "ad22b1f0967349e8a5d586afe7f0d845")
-var itemCount = 0
-let cancellable = cbaService.$productDetails
-    .receive(on: opQueue)
-    .sink { result in
-       print("RESULT: \(result)")
-    } receiveValue: { (prodDetails) in
-        print("RECEIVE: \(prodDetails)")
-    }
+//let opQueue = DispatchQueue.global()
+////let cbaService = CBAProductDetailsService(on: opQueue, productId: "5b47845a7f0044e58db616bb734e8350")
+//let cbaService = CBAProductDetailsService(on: opQueue, productId: "ad22b1f0967349e8a5d586afe7f0d845")
+//var itemCount = 0
+//let cancellable = cbaService.$productDetails
+//    .receive(on: opQueue)
+//    .sink { result in
+//       print("RESULT: \(result)")
+//    } receiveValue: { (prodDetails) in
+//        print("RECEIVE: \(prodDetails)")
+//    }
 
 //let cancellableProductListService = probeProductEndpoint()
 //let cancellableProductDetailsService = probeProductDetailsEndpoint()

@@ -15,9 +15,9 @@
 		5097F92D261A7840002BA689 /* CBAProductDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F92C261A7840002BA689 /* CBAProductDetailsService.swift */; };
 		5097F92E261A7840002BA689 /* CBAProductDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F92C261A7840002BA689 /* CBAProductDetailsService.swift */; };
 		5097F934261A8264002BA689 /* CBAProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F933261A8264002BA689 /* CBAProductDetailsView.swift */; };
-		5097F935261A8264002BA689 /* CBAProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F933261A8264002BA689 /* CBAProductDetailsView.swift */; };
 		5097F939261A842A002BA689 /* CBAProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F938261A842A002BA689 /* CBAProductDetailsViewModel.swift */; };
 		5097F93A261A842A002BA689 /* CBAProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F938261A842A002BA689 /* CBAProductDetailsViewModel.swift */; };
+		5097F955261AD532002BA689 /* ShowBankProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F954261AD532002BA689 /* ShowBankProductsTests.swift */; };
 		5C5D697E26197BD8001F7E06 /* ShowBankProductsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D697D26197BD8001F7E06 /* ShowBankProductsApp.swift */; };
 		5C5D698026197BD8001F7E06 /* CBAProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D697F26197BD8001F7E06 /* CBAProductListView.swift */; };
 		5C5D698226197BD9001F7E06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C5D698126197BD9001F7E06 /* Assets.xcassets */; };
@@ -26,6 +26,16 @@
 		5CEB7D39261983CC00CB1EB6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB7D38261983CC00CB1EB6 /* main.swift */; };
 		5CEB7D4826198BA700CB1EB6 /* CommbankProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB7D2926197FD800CB1EB6 /* CommbankProduct.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5097F957261AD532002BA689 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C5D697226197BD8001F7E06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C5D697926197BD8001F7E06;
+			remoteInfo = ShowBankProducts;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5CEB7D34261983CC00CB1EB6 /* CopyFiles */ = {
@@ -46,6 +56,9 @@
 		5097F92C261A7840002BA689 /* CBAProductDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBAProductDetailsService.swift; sourceTree = "<group>"; };
 		5097F933261A8264002BA689 /* CBAProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBAProductDetailsView.swift; sourceTree = "<group>"; };
 		5097F938261A842A002BA689 /* CBAProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBAProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		5097F952261AD532002BA689 /* ShowBankProductsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowBankProductsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5097F954261AD532002BA689 /* ShowBankProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBankProductsTests.swift; sourceTree = "<group>"; };
+		5097F956261AD532002BA689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C5D697A26197BD8001F7E06 /* ShowBankProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowBankProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5D697D26197BD8001F7E06 /* ShowBankProductsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBankProductsApp.swift; sourceTree = "<group>"; };
 		5C5D697F26197BD8001F7E06 /* CBAProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBAProductListView.swift; sourceTree = "<group>"; };
@@ -58,6 +71,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5097F94F261AD532002BA689 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C5D697726197BD8001F7E06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,6 +113,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5097F953261AD532002BA689 /* ShowBankProductsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5097F954261AD532002BA689 /* ShowBankProductsTests.swift */,
+				5097F956261AD532002BA689 /* Info.plist */,
+			);
+			path = ShowBankProductsTests;
+			sourceTree = "<group>";
+		};
 		5C5D697126197BD8001F7E06 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +130,7 @@
 				5CEB7D2826197F4500CB1EB6 /* model */,
 				5C5D697C26197BD8001F7E06 /* ShowBankProducts */,
 				5CEB7D37261983CC00CB1EB6 /* CommbankProbe */,
+				5097F953261AD532002BA689 /* ShowBankProductsTests */,
 				5C5D697B26197BD8001F7E06 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,6 +140,7 @@
 			children = (
 				5C5D697A26197BD8001F7E06 /* ShowBankProducts.app */,
 				5CEB7D36261983CC00CB1EB6 /* CommbankProbe */,
+				5097F952261AD532002BA689 /* ShowBankProductsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +186,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5097F951261AD532002BA689 /* ShowBankProductsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5097F959261AD532002BA689 /* Build configuration list for PBXNativeTarget "ShowBankProductsTests" */;
+			buildPhases = (
+				5097F94E261AD532002BA689 /* Sources */,
+				5097F94F261AD532002BA689 /* Frameworks */,
+				5097F950261AD532002BA689 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5097F958261AD532002BA689 /* PBXTargetDependency */,
+			);
+			name = ShowBankProductsTests;
+			productName = ShowBankProductsTests;
+			productReference = 5097F952261AD532002BA689 /* ShowBankProductsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5C5D697926197BD8001F7E06 /* ShowBankProducts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C5D698926197BD9001F7E06 /* Build configuration list for PBXNativeTarget "ShowBankProducts" */;
@@ -198,6 +247,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					5097F951261AD532002BA689 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5C5D697926197BD8001F7E06;
+					};
 					5C5D697926197BD8001F7E06 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -221,11 +274,19 @@
 			targets = (
 				5C5D697926197BD8001F7E06 /* ShowBankProducts */,
 				5CEB7D35261983CC00CB1EB6 /* CommbankProbe */,
+				5097F951261AD532002BA689 /* ShowBankProductsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5097F950261AD532002BA689 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C5D697826197BD8001F7E06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,6 +299,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5097F94E261AD532002BA689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5097F955261AD532002BA689 /* ShowBankProductsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C5D697626197BD8001F7E06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5097F935261A8264002BA689 /* CBAProductDetailsView.swift in Sources */,
 				5097F93A261A842A002BA689 /* CBAProductDetailsViewModel.swift in Sources */,
 				5CEB7D39261983CC00CB1EB6 /* main.swift in Sources */,
 				5097F92E261A7840002BA689 /* CBAProductDetailsService.swift in Sources */,
@@ -270,7 +338,61 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5097F958261AD532002BA689 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C5D697926197BD8001F7E06 /* ShowBankProducts */;
+			targetProxy = 5097F957261AD532002BA689 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5097F95A261AD532002BA689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ShowBankProductsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ace-authors.ShowBankProductsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShowBankProducts.app/ShowBankProducts";
+			};
+			name = Debug;
+		};
+		5097F95B261AD532002BA689 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ShowBankProductsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ace-authors.ShowBankProductsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShowBankProducts.app/ShowBankProducts";
+			};
+			name = Release;
+		};
 		5C5D698726197BD9001F7E06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -464,6 +586,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5097F959261AD532002BA689 /* Build configuration list for PBXNativeTarget "ShowBankProductsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5097F95A261AD532002BA689 /* Debug */,
+				5097F95B261AD532002BA689 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5C5D697526197BD8001F7E06 /* Build configuration list for PBXProject "ShowBankProducts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

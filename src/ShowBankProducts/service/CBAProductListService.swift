@@ -42,7 +42,13 @@ class CBAProductListService: ObservableObject {
             .receive(on: opQueue)
             .decode(type: CommbankProduct.self, decoder: JSONDecoder())
             .sink { result in
-                print("Done fetching products: \(result)")
+                switch result {
+                case .finished:
+                    print("Done fetching products: \(result)")
+                    self.fetchCancellable?.cancel()
+                default:
+                    break
+                }
             } receiveValue: { (values) in
                 for p in values.data.products {
                     self.products.append(p)
