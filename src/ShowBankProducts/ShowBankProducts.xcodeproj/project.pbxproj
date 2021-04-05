@@ -18,6 +18,8 @@
 		5097F939261A842A002BA689 /* CBAProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F938261A842A002BA689 /* CBAProductDetailsViewModel.swift */; };
 		5097F93A261A842A002BA689 /* CBAProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F938261A842A002BA689 /* CBAProductDetailsViewModel.swift */; };
 		5097F955261AD532002BA689 /* ShowBankProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F954261AD532002BA689 /* ShowBankProductsTests.swift */; };
+		5097F987261AF2F4002BA689 /* CBAServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F986261AF2F4002BA689 /* CBAServices.swift */; };
+		5097F988261AF2F4002BA689 /* CBAServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5097F986261AF2F4002BA689 /* CBAServices.swift */; };
 		5C5D697E26197BD8001F7E06 /* ShowBankProductsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D697D26197BD8001F7E06 /* ShowBankProductsApp.swift */; };
 		5C5D698026197BD8001F7E06 /* CBAProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D697F26197BD8001F7E06 /* CBAProductListView.swift */; };
 		5C5D698226197BD9001F7E06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C5D698126197BD9001F7E06 /* Assets.xcassets */; };
@@ -59,6 +61,7 @@
 		5097F952261AD532002BA689 /* ShowBankProductsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowBankProductsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5097F954261AD532002BA689 /* ShowBankProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBankProductsTests.swift; sourceTree = "<group>"; };
 		5097F956261AD532002BA689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5097F986261AF2F4002BA689 /* CBAServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBAServices.swift; sourceTree = "<group>"; };
 		5C5D697A26197BD8001F7E06 /* ShowBankProducts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowBankProducts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5D697D26197BD8001F7E06 /* ShowBankProductsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowBankProductsApp.swift; sourceTree = "<group>"; };
 		5C5D697F26197BD8001F7E06 /* CBAProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBAProductListView.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 			children = (
 				5097F8F72619C198002BA689 /* CBAProductListService.swift */,
 				5097F92C261A7840002BA689 /* CBAProductDetailsService.swift */,
+				5097F986261AF2F4002BA689 /* CBAServices.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -319,6 +323,7 @@
 				5097F8F82619C198002BA689 /* CBAProductListService.swift in Sources */,
 				5097F92D261A7840002BA689 /* CBAProductDetailsService.swift in Sources */,
 				5097F934261A8264002BA689 /* CBAProductDetailsView.swift in Sources */,
+				5097F987261AF2F4002BA689 /* CBAServices.swift in Sources */,
 				5C5D697E26197BD8001F7E06 /* ShowBankProductsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +338,7 @@
 				5097F8FD2619C80B002BA689 /* CBAProductListService.swift in Sources */,
 				5097F927261A7590002BA689 /* CommbankProductDetails.swift in Sources */,
 				5CEB7D4826198BA700CB1EB6 /* CommbankProduct.swift in Sources */,
+				5097F988261AF2F4002BA689 /* CBAServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -65,7 +65,8 @@ class ShowBankProductsTests: XCTestCase {
     }
     
     func testProductListAPIEndPoint() throws {
-        let urlString = "https://api.commbank.com.au/public/cds-au/v1/banking/products"
+        // "https://api.commbank.com.au/public/cds-au/v1/banking/products"
+        let urlString = CBAServices.apiEndPointProductList
         let url = URL(string: urlString)!
         var urlRequest = URLRequest(url: url)
         
@@ -101,7 +102,8 @@ class ShowBankProductsTests: XCTestCase {
     }
     
     func testProductDetailsAPIEndPoint() throws {
-        let urlString = "https://api.commbank.com.au/public/cds-au/v1/banking/products/ad22b1f0967349e8a5d586afe7f0d845"
+        // "https://api.commbank.com.au/public/cds-au/v1/banking/products/\(existProdId)"
+        let urlString = "\(CBAServices.apiEndPointProductDetails)\(existProdId)"
         let url = URL(string: urlString)!
         var urlRequest = URLRequest(url: url)
         
