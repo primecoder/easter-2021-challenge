@@ -49,6 +49,8 @@ This is a code-challenge I participated during Easter Holiday 2021. It demonstra
 
 ## Code Organisation
 
+This application was designed and developed using MVVM Design Pattern. Its souce codes are organised as below.
+
 ![](doc/res/easter-challenge-arch.png)
 
 - Service Layer
