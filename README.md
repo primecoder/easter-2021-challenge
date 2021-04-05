@@ -86,6 +86,8 @@ This application was designed and developed using MVVM Design Pattern. Its souce
 
 ## Testing and Code-Coverage
 
+- Currently achived 87.9% code-coverage
+
 ![](doc/res/test-coverage.png)
 
 
