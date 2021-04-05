@@ -153,9 +153,19 @@
 			path = ShowBankProductsUITests;
 			sourceTree = "<group>";
 		};
+		5097F9B0261B1CAB002BA689 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C5D697F26197BD8001F7E06 /* CBAProductListView.swift */,
+				5097F933261A8264002BA689 /* CBAProductDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5C5D697126197BD8001F7E06 = {
 			isa = PBXGroup;
 			children = (
+				5097F9B0261B1CAB002BA689 /* View */,
 				5097F9002619D4B8002BA689 /* ViewModel */,
 				5097F8F62619C180002BA689 /* service */,
 				5CEB7D2826197F4500CB1EB6 /* model */,
@@ -182,8 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				5C5D697D26197BD8001F7E06 /* ShowBankProductsApp.swift */,
-				5C5D697F26197BD8001F7E06 /* CBAProductListView.swift */,
-				5097F933261A8264002BA689 /* CBAProductDetailsView.swift */,
 				5C5D698126197BD9001F7E06 /* Assets.xcassets */,
 				5C5D698626197BD9001F7E06 /* Info.plist */,
 				5C5D698326197BD9001F7E06 /* Preview Content */,
