@@ -45,7 +45,7 @@ This is a code-challenge I participated during Easter Holiday 2021. It demonstra
 | - Support both Portrait/Landscape modes | - Unit Test with XCTest |
 | - Support Accessibility Scalable Text Sizes | - UI Automation Test with XCUITest |
 | - Simple Error Handling | - Model-View-ViewModel (MVVM) Design Pattern |
-| | - Test Coverage |
+| - No third-party libraries were used | - Test Coverage |
 
 ## Code Organisation
 
